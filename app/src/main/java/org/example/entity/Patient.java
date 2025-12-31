@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -35,6 +36,9 @@ public class Patient {
     @OneToOne
     @JoinColumn(name = "patient_insurance_id")
     private Insurance insurance;
+    @OneToMany(mappedBy = "patient")
+    @JoinColumn(name = "patient_appointments")
+    private List<Appointment> appointments;
 }
 
 enum  Gender {
