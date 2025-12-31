@@ -37,7 +37,6 @@ public class Patient {
     @JoinColumn(name = "patient_insurance_id")
     private Insurance insurance;
     @OneToMany(mappedBy = "patient")
-    @JoinColumn(name = "patient_appointments")
     private List<Appointment> appointments;
 }
 
