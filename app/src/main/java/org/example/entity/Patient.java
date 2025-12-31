@@ -32,6 +32,8 @@ public class Patient {
     private Gender gender;
     @Enumerated(EnumType.STRING)
     private BloodGroup blood_Group;
+    @OneToOne
+    private Insurance insurance;
 }
 
 enum  Gender {
