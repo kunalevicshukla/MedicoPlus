@@ -33,6 +33,7 @@ public class Patient {
     @Enumerated(EnumType.STRING)
     private BloodGroup blood_Group;
     @OneToOne
+    @JoinColumn(name = "patient_insurance_id")
     private Insurance insurance;
 }
 

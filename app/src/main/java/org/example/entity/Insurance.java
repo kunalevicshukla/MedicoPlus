@@ -25,4 +25,7 @@ public class Insurance {
 
     @CreationTimestamp
     private LocalDateTime createdAt;
+
+    @OneToOne(mappedBy = "insurance") //in order to have a single source of truth
+    private Patient patient;
 }
