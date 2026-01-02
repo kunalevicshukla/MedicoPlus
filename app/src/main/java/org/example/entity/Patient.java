@@ -1,5 +1,6 @@
 package org.example.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,6 +36,7 @@ public class Patient {
     @JoinColumn(name = "patient_insurance_id")
     private Insurance insurance;
     @OneToMany(mappedBy = "patient")
+    @JsonIgnore
     private List<Appointment> appointments;
 }
 
